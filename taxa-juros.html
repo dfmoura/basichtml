@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+
+<head>
+    <title>1030125 - Diogo Ferreira Moura</title>
+    <meta charset="UTF-8" />
+
+</head>
+
+<body>
+  <a href="index.html">Menu Principal</a> | 
+  <a href="cores.html">Cores</a> | 
+  <a href="cotacoes.html">Cotações</a> |
+  <a href="imagem.html">Imagem</a> |
+  <a href="imagens2.html">Imagens 2</a> |
+  <a href="taxa-juros.html">Cotações</a>
+    <div id="jsondata"></div>
+
+    <script>
+      // Fetch the JSON data from the web link
+      fetch('https://olinda.bcb.gov.br/olinda/servico/taxaJuros/versao/v2/odata/TaxasJurosDiariaPorInicioPeriodo?$top=10000&$skip=0&$format=json')
+        .then(response => response.json())
+        .then(data => {
+          // Convert the JSON data to a string and format it with line breaks and indentation
+          const formattedData = JSON.stringify(data, null, 2);
+  
+          // Display the formatted JSON data in the div element
+          document.getElementById('jsondata').textContent = formattedData;
+        })
+        .catch(error => console.error(error));
+    </script>
+
+
+</body>
+
+</html>

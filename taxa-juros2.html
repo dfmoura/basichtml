@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+
+<head>
+    <title>1030125 - Diogo Ferreira Moura</title>
+    <meta charset="UTF-8" />
+
+</head>
+
+<body>
+
+  <h1>JSON to HTML Table</h1>
+	<table id="table"></table>
+	
+	<script>
+		// Sample JSON data
+		var data = [
+			{ "name": "John Doe", "age": 25, "email": "john.doe@example.com" },
+			{ "name": "Jane Smith", "age": 30, "email": "jane.smith@example.com" },
+			{ "name": "Bob Johnson", "age": 40, "email": "bob.johnson@example.com" }
+		];
+		
+		// Get table element
+		var table = document.getElementById("table");
+		
+		// Create table header
+		var header = table.createTHead();
+		var row = header.insertRow(0);
+		for (var key in data[0]) {
+			var th = document.createElement("th");
+			var text = document.createTextNode(key);
+			th.appendChild(text);
+			row.appendChild(th);
+		}
+		
+		// Create table body
+		var tbody = table.createTBody();
+		for (var i = 0; i < data.length; i++) {
+			row = tbody.insertRow(i);
+			for (var key in data[i]) {
+				var cell = row.insertCell(-1);
+				var text = document.createTextNode(data[i][key]);
+				cell.appendChild(text);
+			}
+		}
+	</script>
+
+
+</body>
+
+</html>
