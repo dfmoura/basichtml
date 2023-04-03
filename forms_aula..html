@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+
+<head>
+    <title>Formularios</title>
+    <meta charset="UTF-8" />
+
+
+</head>
+
+<body>
+    <h1>Uso de Formularios</h1>
+    <form method="GET" action="grava.php">
+        <fieldset>
+            <legend>Dados Pessoais:</legend>
+            Nome: <input type="text" id="nome" name="nome" size="100" maxlength="20" placeholder="Digite o nome!!!" autofocus required autocomplete="additional-name"/>
+            <br>
+
+            Senha: <input type="password" id="senha" name="senha">
+
+            <br>
+
+            Escolha um carro: <select id="carros" name="carros">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+
+            <br>
+            <br>
+            Qual seu estilo musical?
+            <input id="estilo" name="estilo" type="text" list="listaestilos"/>
+            <datalist id="listaestilos"><br/>Escolha entre estes:
+                <option value="samba">Samba</option>
+                <option value="blues">Blues</option>
+                <option value="jazz">Jazz</option>
+                <option value="pop">Pop</option>
+            </datalist>
+            <br>
+            <br>
+            <input type="radio" name="genero" value="masculino">Masculino<br>
+            <input type="radio" name="genero" value="feminino">Feminino<br>
+
+            <br>
+            <br>
+            Quais atividades físicas gosta de praticar?
+            <br>
+            <input type="checkbox" name="esporte1" value="natação">Natação
+            <input type="checkbox" name="esporte2" value="ginástica">Ginática
+            <input type="checkbox" name="esporte3" value="vôlei">Vôlei
+            <input type="checkbox" name="esporte4" value="futebol">Futebol
+
+            <br>
+            <br>
+            <textarea cols=60 id="opiniao" rows="10" name="opiniao" maxlength="500" wrap="hard" placeholder="coragem, você consegue ! "></textarea>
+
+            <br>
+            <br>
+
+            <p><label for="escolha_cor"> Cor : </label><input type="color" id="escolha_cor" name="escolha_cor" /></p>
+            <p><label for="inicio"> Início : </label><input type="date"  id ="inicio" name="inicio" min="2011-01-01"/></p>
+            <p><label for="palestra"> Palestra : </label><input type="datetime" id="palestra" name="palestra"/></p>
+            <p><label for="concerto"> Concerto : </label><input type="datetime-local" id="concerto" name="concerto"/></p>
+            <p><label for="seuemail"> Email : </label><input type="email" id="seuemail" name="seuemail" required/></p>
+            <p><label for="ferias"> Férias: </label><input type="month" id="ferias" name="ferias"/></p>
+            <p><label for="musicas"> Músicas : </label><input type="number" id="musicas" name="musicas" min="2" max="8"/></p>
+            <p><label for="altitude"> Altitude : </label><input type="range" id="altitude" name="altitude" min="100" max="1000" step="100"/></p>
+            <p><label for="busca"> Busca : </label><input type="search" id="busca" name="busca" placeholder="pesquisar..."/></p>
+            <p><label for="telefone"> Telefone: </label><input type="tel" id="telefone" name="telefone"/></p>
+            <p><label for="horario"> Horário : </label><input type="time" id="horario" name="horario"/></p>
+            <p><label for="site"> Site : </label><input type="url" id="site" name="site"/></p>
+            <p><label for="semana"> Semana : </label><input type="week" id="semana" name="semana"/><p>
+
+            <br>
+            <br>
+            <input type="submit" id="enviar" name="enviar" value="Enviar"/>
+
+        </fieldset>
+    </form>
+
+
+
+</body>
+
+</html>

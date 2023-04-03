@@ -1,0 +1,183 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+
+<head>
+    <title>1030125 - Diogo Ferreira Moura</title>
+    <meta charset="UTF-8" />
+
+</head>
+
+<body>
+
+    <h1>Forms</h1>
+<form id="contato">
+    <fieldset name="pessoais" form="contato">
+        <legend>Dados pessoais</legend>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"/>
+    </fieldset>
+    <fieldset name="profissional" form="contato" disabled="disabled">
+        <legend>Experiência profissional</legend>
+        <label for="tecnica">Técnica</label>
+        <input type="radio" name="area" id="tecnica" />
+        <label for="administrativa">Administrativa</label>
+        <input type="radio" name="area" id="administrativa"/>
+    </fieldset>
+    <input type="submit" />
+    <input type="text" name="nome" maxlength="35" />
+    <input type="password" name="senha" maxlength="8" />
+    <input type="checkbox" name="noticias" value="Artes" />
+    <input type="file" name="upload" />
+    <input type="hidden" name="codigo_do_produto" value="034,035" />
+    <input type="image" name="enviar" src="imagens/logo_twitter.png" alt="Botão enviar" />
+    <input type="password" name="senha" maxlength="8" />
+    <input type="radio" name="tamanho" value="pequeno" />
+    <input type="button" name="somar" value="Somar" />
+    <input type="reset" name="limpar" value="Limpar dados" />
+    <input type="submit" name="enviar" value="Enviar dados" />
+
+    <br>
+    <fieldset>
+        <legend>Escolha o(s) curso(s)</legend>
+        <p><label for="html">Quero estudar HTML</label>
+        <input id="html" name="html" type="checkbox" value="sim" checked="checked"/></p>
+        <p><label for="CSS">Qurero estudar CSS</label>
+        <input id="CSS" name="CSS" type="checkbox" value="sim"/></p>
+        <p><label for="javascript">Quero estudar JavaScript</label>
+        <input id="javascript" name="javascript" type="checkbox" value="sim"/></p>
+    </fieldset>
+
+    <br>
+    <fieldset>
+        <legend>Escolha um horário</legend>
+        <p><label for="semana">Prefiro estudar durante a semana</label>
+        <input id="semana" name="horario" type="radio" value="semana" /></p>
+        <p><label for="sabados">Prefiro estudar aos sábados</label>
+        <input id="sabados" name="horario" type="radio" value="sabados"/></p>
+    </fieldset>
+
+    <fieldset>
+        <h1>Atributos do Type</h1>
+        <input type="color" name="escolha_cor"/>
+        <input type="date" name="inicio" min="2011-01-01"/>
+        <input type="datetime" name="palestra"/>
+        <input type="datetime-local" name="concerto"/>
+        <input type="email" name="seuemail" required="required"/>
+        <input type="month" name="ferias"/>
+        <input type="range" name="altitude" min="100" max="1000" step="100"/>
+        <input type="search" name="busca" placeholder="pequise aqui..."/>
+        <input type="tel" name="telefone"/>
+        <input type="time" name="horario"/>
+        <input type="week" name="semana"/>
+    </fieldset>
+    <br>
+    <br>
+
+    <fieldset>
+        <button type="button" onclick="alert('Sempre faça backup dos seus arquivos.')">
+        <strong>Dica do dia</strong>
+        </button>
+    </fieldset>
+    <br>
+    <br>
+    <filedset>
+        <label for="instrumento">Escolha seu instrumento</label>
+        <select name="instrumento" id="instrumento">
+            <option value="trp">trompete</option>
+            <option value="tpa">trompa</option>
+            <option value="tbn">trombone</option>
+            <option value="tub">tuba</option>
+        </select>
+    </filedset>
+    <br>
+    <br>
+    <fieldset>
+        <label for=""compositor">Escolha seu(s) compositor(es) favorito(s)</label>
+        <select name="compositor" id="compositor" size="3" multiple="multiple">
+            <option value="bach">Bach</option>
+            <option value="mozart">Mozart</option>
+            <option value="villa" selected="selected">Villa Lobos</option>
+        </select>
+    </fieldset>
+    <br>
+    <br>
+    <fieldset>
+        <legend>Música</legend>
+        <label for="estilo">Qual o seu estilo musical?</label>
+        <input id="estilo" name="estilo" type="text" list="listaestilos"/>
+        <datalist id="listaestilos"><br/>Escolha entre estes:
+        <option value="samba">Samba</option>
+        <option value="blues">Blues</option>
+        <option value="jazz">Jazz</option>
+        <option value="mpb">MPB</option>
+        <option value="rock">Rock</option>
+        <option value="clássico">Clássico</option>
+        <option value="bossanova">Bossa-Nova</option>
+        <option value="pop">Pop</option>
+        </datalist>
+    </fieldset>
+
+    <br>
+    <br>
+    <fieldset>
+        <legend>Música</legend>
+        <label for="estilo">Qual o seu estilo musical?</label>
+        <input id="estilo" name="estilo" type="text" list="listaestilos"/>
+        <datalist id="listaestilos">
+        <label for="estiloalt"> Ou, selecione desta lista</label>
+        <select name="estiloalt" id="estiloalt">
+        <option value="samba">Samba</option>
+        <option value="blues">Blues</option>
+        <option value="jazz">Jazz</option>
+        <option value="mpb">MPB</option>
+        <option value="rock">Rock</option>
+        <option value="clássico">Clássico</option>
+        <option value="bossanova">Bossa-Nova</option>
+        <option value="pop">Pop</option>
+        </select>
+        </datalist>
+    </fieldset>
+    <br>
+    <br>
+    <fieldset>
+        <legend>Na orquestra</legend>
+        <label for="escolha">Escolha um instrumento</label>
+        <select id="escolha" name="escolha">
+        <option>Selecione...</option>
+        <optgroup label="Cordas">
+            <option value="violino">Violino</option>
+            <option value="viola">Viola</option>
+            <option value="violoncelo">Violoncelo</option>
+        </optgroup>
+        <optgroup label="Sopros">
+            <option value="flauta">Flauta</option>
+            <option value="oboe">Oboé</option>
+            <option value="clarinete">Clarinete</option>
+        </optgroup>
+        </select>
+    </fieldset>
+
+    <br>
+    <br>
+    <h1>Elemento textarea</h1>
+
+    <fieldset>
+        <legend>Sua opinião</legend>
+        <label for="opiniao"></label>
+        O que você mais gostou no evento?<br>
+        <textarea cols="60" id="opiniao" rows="10" name="opiniao" maxlength="500" wrap="hard" placeholder="coragem, você consegue!"></textarea>
+
+    </fieldset>
+
+
+</form>
+
+    
+    
+    
+
+
+
+</body>
+
+</html>
